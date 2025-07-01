@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+    @apply hover:text-gray-300 transition-colors;
+}
+
+.nav-link.active {
+    @apply text-white;
+    text-shadow:
+            0 0 4px rgba(255, 255, 255, 0.6),
+            0 0 8px rgba(255, 255, 255, 0.4),
+            0 0 12px rgba(255, 255, 255, 0.2);
+}
