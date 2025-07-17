@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Navigation Styles */
 .nav-link {
     @apply hover:text-gray-300 transition-colors;
 }
@@ -12,4 +13,37 @@
             0 0 4px rgba(255, 255, 255, 0.6),
             0 0 8px rgba(255, 255, 255, 0.4),
             0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Tailwind Utilities Extension */
+@layer components {
+    .btn-primary {
+        @apply bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300;
+    }
+
+    .btn-secondary {
+        @apply border border-blue-500 text-blue-400 font-bold py-3 px-8 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300;
+    }
+
+    .section-title {
+        @apply text-center text-white text-4xl font-extrabold mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-center text-gray-300 max-w-3xl mx-auto mb-16 text-pretty;
+    }
+
+    .hero-bg {
+        background-color: #0a0a0a;
+        background-image:
+                radial-gradient(circle at top right, rgba(29, 78, 216, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(29, 78, 216, 0.15), transparent 50%);
+    }
+    .gsp-light {
+        @apply text-[#00D9FF] font-bold;
+        text-shadow:
+                0 0 5px #00D9FF,
+                0 0 10px #00D9FF,
+                0 0 20px #00D9FF;
+    }
 }

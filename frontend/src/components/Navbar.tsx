@@ -33,25 +33,17 @@ export default function Navbar() {
       <div className="relative z-10 flex items-center justify-between h-full px-12 font-sans">
 
         {/* Left: Logo + Title */}
-        <div className="flex items-center space-x-4 min-w-[250px]">
+        <Link to="/" className="flex items-center space-x-4 min-w-[250px]">
           <img src={logo} alt="Logo" className="h-16 w-auto object-contain"/>
           <div className="leading-tight">
             <div className="text-xl font-bold">GSP Reinforcement</div>
             <div className="text-xs text-gray-400 tracking-wide">We see the sound. We hear the light.</div>
           </div>
-        </div>
+        </Link>
 
         {/* Center: Navigation Links */}
         <div className="flex-1 flex justify-center">
           <div className="flex space-x-12 text-base font-semibold uppercase tracking-wide">
-            <Link
-              to="/"
-              className={`nav-link w-24 text-center ${location.pathname === "/" ? "active" : ""}`}
-              data-path="/"
-            >
-              Home
-            </Link>
-
             <Link
               to="/about"
               className={`nav-link w-24 text-center ${location.pathname === "/about" ? "active" : ""}`}
