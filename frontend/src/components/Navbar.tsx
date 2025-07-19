@@ -33,8 +33,12 @@ export default function Navbar() {
       <div className="relative z-10 flex items-center justify-between h-full px-12 font-sans">
 
         {/* Left: Logo + Title */}
-        <Link to="/" className="flex items-center space-x-4 min-w-[250px]">
-          <img src={logo} alt="Logo" className="h-16 w-auto object-contain"/>
+        <Link
+          to="/"
+          className="nav-link flex items-center space-x-4 min-w-[250px]"
+          data-path="/"
+        >
+          <img src={logo} alt="Logo" className="h-16 w-auto object-contain" />
           <div className="leading-tight">
             <div className="text-xl font-bold">GSP Reinforcement</div>
             <div className="text-xs text-gray-400 tracking-wide">We see the sound. We hear the light.</div>
@@ -49,7 +53,7 @@ export default function Navbar() {
               className={`nav-link w-24 text-center ${location.pathname === "/about" ? "active" : ""}`}
               data-path="/about"
             >
-              About
+              Giới thiệu
             </Link>
 
             <Link
@@ -57,7 +61,7 @@ export default function Navbar() {
               className={`nav-link w-24 text-center ${location.pathname === "/solutions" ? "active" : ""}`}
               data-path="/solutions"
             >
-              Solutions
+              Dịch vụ
             </Link>
 
             <Link

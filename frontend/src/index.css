@@ -42,8 +42,24 @@
     .gsp-light {
         @apply text-[#00D9FF] font-bold;
         text-shadow:
+            0 0 5px #00D9FF,
+            0 0 10px #00D9FF,
+            0 0 20px #00D9FF;
+        animation: glowPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+        0%, 100% {
+            text-shadow:
                 0 0 5px #00D9FF,
                 0 0 10px #00D9FF,
                 0 0 20px #00D9FF;
+        }
+        50% {
+            text-shadow:
+                0 0 2px #00D9FF,
+                0 0 4px #00D9FF,
+                0 0 8px #00D9FF;
+        }
     }
 }

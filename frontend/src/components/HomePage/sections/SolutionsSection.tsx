@@ -4,7 +4,7 @@ export default function SolutionsSection() {
   return (
     <section id="solutions" className={styles.solutionsSection}>
       <div className={styles.solutionsContainer}>
-        <h2 className={styles.solutionsTitle}>Our Solutions</h2>
+        <h2 className={styles.solutionsTitle}>Dịch vụ của chúng tôi</h2>
         <p className={styles.solutionsSubtitle}>
           We provide end-to-end services across a variety of categories. Each solution is tailored to the unique demands of your project.
         </p>

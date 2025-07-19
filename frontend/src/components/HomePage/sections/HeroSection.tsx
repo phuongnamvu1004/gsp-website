@@ -15,10 +15,10 @@ export default function HeroSection() {
         </p>
         <div className="mt-10 flex justify-center items-center gap-4">
           <Link to="/solutions" className={styles.ctaButton}>
-            Explore Solutions
+            Tham khảo dịch vụ
           </Link>
           <Link to="/contact" className={styles.secondaryButton}>
-            Get a Quote
+            Nhận báo giá
           </Link>
         </div>
       </div>
