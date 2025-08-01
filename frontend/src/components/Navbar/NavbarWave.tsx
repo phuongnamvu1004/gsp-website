@@ -1,3 +1,4 @@
+import styles from './Navbar.module.scss';
 import { useEffect, useRef } from 'react';
 
 interface NavbarWaveProps {
@@ -26,17 +27,11 @@ export default function NavbarWave({ activeX }: NavbarWaveProps) {
 
   return (
     <svg
-      className="w-full h-full absolute top-0 left-0 z-20 pointer-events-none"
+      className={styles.wave}
       viewBox="0 0 1440 100"
       preserveAspectRatio="none"
     >
-      <path
-        ref={pathRef}
-        fill="none"
-        stroke="white"
-        strokeWidth="2"
-        opacity="0.3"
-      />
+      <path ref={pathRef} />
     </svg>
   );
 }

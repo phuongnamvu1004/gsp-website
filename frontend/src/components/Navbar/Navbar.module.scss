@@ -1,0 +1,55 @@
+.navbar {
+  @apply relative z-[999] h-20 bg-black text-white overflow-visible;
+}
+
+.navbarContent {
+  @apply relative z-auto flex items-center justify-between h-full px-12;
+}
+
+.logoContainer {
+  @apply flex items-center gap-4 min-w-[250px];
+}
+
+.logoTitle .mainTitle {
+  @apply text-xl font-bold leading-[1.25];
+}
+.logoTitle .subtitle {
+  @apply text-xs text-gray-400 tracking-wide;
+}
+
+.navLink {
+  @apply w-24 text-center;
+}
+
+.ctaContainer {
+  @apply min-w-[250px] flex justify-end;
+}
+
+.ctaButton {
+  @apply border border-white px-6 py-2 rounded-full text-sm font-semibold uppercase transition-all duration-300 ease-in-out hover:bg-white hover:text-black;
+}
+
+.wave {
+  @apply w-full h-full absolute top-0 left-0 z-20 pointer-events-none;
+}
+.wave path {
+  @apply fill-none stroke-white opacity-30;
+  stroke-width: 2;
+}
+
+.dropdownTrigger {
+  @apply flex items-center gap-2;
+}
+
+.dropdownIcon {
+  @apply text-xs;
+}
+
+.customDropdownMenu :global(.ant-dropdown-menu-item) {
+  @apply text-white font-bold text-base font-[Montserrat] mb-1 last:mb-0;
+}
+
+.customDropdownMenu :global(.ant-dropdown-menu) {
+  @apply bg-[#0f1123] rounded-xl p-3 font-[Montserrat] text-white shadow-lg w-52;
+}
+
