@@ -6,18 +6,22 @@ interface NavbarWaveProps {
 }
 
 export default function NavbarWave({ activeX }: NavbarWaveProps) {
-  const pathRef = useRef<SVGPathElement>(null);
+  const pathRefs = useRef<SVGPathElement[]>([]);
   const frameRef = useRef<number>(0);
   const phaseRef = useRef<number>(0);
 
   useEffect(() => {
     const animate = () => {
-      if (!pathRef.current) return;
+      if (!pathRefs.current) return;
 
-      const path = generateWavePath(activeX, phaseRef.current);
-      pathRef.current.setAttribute('d', path);
+      pathRefs.current.forEach((pathRef, index) => {
+        if (!pathRef) return;
+        const delayedPhase = phaseRef.current - index * 0.4;
+        const path = generateWavePath(activeX, delayedPhase);
+        pathRef.setAttribute('d', path);
+      });
 
-      phaseRef.current += 0.1;
+      phaseRef.current += 0.05;
       frameRef.current = requestAnimationFrame(animate);
     };
 
@@ -31,8 +35,15 @@ export default function NavbarWave({ activeX }: NavbarWaveProps) {
       viewBox="0 0 1440 100"
       preserveAspectRatio="none"
     >
-      <path ref={pathRef} />
-    </svg>
+      {Array.from({ length: 3 }).map((_, i) => (
+        <path
+          key={i}
+          ref={(el) => {
+            if (el) pathRefs.current[i] = el;
+          }}
+          opacity={0.3 - i * 0.08}
+        />
+      ))}    </svg>
   );
 }
 

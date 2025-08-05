@@ -14,12 +14,14 @@ export default function Navbar() {
     if (!navRef.current) return;
 
     const links = Array.from(navRef.current.querySelectorAll('.nav-link')) as HTMLElement[];
-    const activeLink = links.find(link => link.dataset.path === location.pathname);
-
+    const activeLink = links.find(link =>
+      location.pathname === link.dataset.path || location.pathname.startsWith(link.dataset.path + "/")
+    );
     if (activeLink) {
       const rect = activeLink.getBoundingClientRect();
       const containerRect = navRef.current.getBoundingClientRect();
       const centerX = rect.left - containerRect.left + rect.width / 2;
+      console.log(`Active link: ${activeLink.dataset.path}, Center X: ${centerX}`);
 
       // Normalize to 1440 width (your SVG viewBox width)
       const normalized = (centerX / containerRect.width) * 1440;
@@ -58,15 +60,15 @@ export default function Navbar() {
               Giới thiệu
             </Link>
 
-            <NavbarDropdown label="Dịch vụ">
+            <NavbarDropdown label="Dịch vụ" path={"/solutions"}>
               <Link
-                to="/solution1"
+                to="/solutions/consulting"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
                 Tư vấn kỹ thuật
               </Link>
               <Link
-                to="/solution2"
+                to="/solutions/maintenance"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
                 Bảo trì hệ thống
