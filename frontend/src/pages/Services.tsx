@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Consulting from "../components/Services/Consulting";
-import Maintenance from "../components/Services/Maintenance";
+import Consulting from "../components/ServicesPage/Consulting";
+import Maintenance from "../components/ServicesPage/Maintenance";
 
 export default function Services() {
   return (

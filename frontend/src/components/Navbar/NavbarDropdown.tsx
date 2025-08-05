@@ -19,8 +19,7 @@ export default function NavbarDropdown({ label, children, path }: NavbarDropdown
     <Dropdown
       menu={{ items }}
       trigger={['hover', 'click']}
-      placement="bottomRight"
-      arrow
+      placement="bottomLeft"
       overlayClassName={styles.customDropdownMenu}
     >
       <div className={`${styles.dropdownTrigger} nav-link`} data-path={path}>

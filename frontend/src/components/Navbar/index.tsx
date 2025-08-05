@@ -65,13 +65,13 @@ export default function Navbar() {
                 to="/solutions/consulting"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
-                Tư vấn kỹ thuật
+                BOH
               </Link>
               <Link
                 to="/solutions/maintenance"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
-                Bảo trì hệ thống
+                FOH
               </Link>
             </NavbarDropdown>
 
@@ -83,13 +83,28 @@ export default function Navbar() {
               Blog
             </Link>
 
-            <Link
-              to="/courses"
-              className={`nav-link ${styles.navLink} ${location.pathname === "/courses" ? "active" : ""}`}
-              data-path="/courses"
-            >
-              Khoá học
-            </Link>
+            {/*<Link*/}
+            {/*  to="/courses"*/}
+            {/*  className={`nav-link ${styles.navLink} ${location.pathname === "/courses" ? "active" : ""}`}*/}
+            {/*  data-path="/courses"*/}
+            {/*>*/}
+            {/*  Khoá học*/}
+            {/*</Link>*/}
+
+            <NavbarDropdown label="Khoá học" path={"/courses"}>
+              <Link
+                to="/courses/basic"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Lớp học cơ bản
+              </Link>
+              <Link
+                to="/courses/advanced"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Lớp học nâng cao
+              </Link>
+            </NavbarDropdown>
           </div>
         </div>
 

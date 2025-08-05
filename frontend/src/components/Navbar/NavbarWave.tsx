@@ -16,7 +16,7 @@ export default function NavbarWave({ activeX }: NavbarWaveProps) {
 
       pathRefs.current.forEach((pathRef, index) => {
         if (!pathRef) return;
-        const delayedPhase = phaseRef.current - index * 0.4;
+        const delayedPhase = phaseRef.current - index * 0.5;
         const path = generateWavePath(activeX, delayedPhase);
         pathRef.setAttribute('d', path);
       });
@@ -43,7 +43,8 @@ export default function NavbarWave({ activeX }: NavbarWaveProps) {
           }}
           opacity={0.3 - i * 0.08}
         />
-      ))}    </svg>
+      ))}
+    </svg>
   );
 }
 
@@ -52,7 +53,7 @@ function generateWavePath(activeX: number, phase: number): string {
   const baseY = 50;
   const points = 100;
   const segment = width / points;
-  const maxAmplitude = 12;
+  const maxAmplitude = 6;
 
   let path = `M 0 ${baseY}`;
   for (let i = 0; i <= points; i++) {
