@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Consulting from "../components/ServicesPage/Consulting";
-import Maintenance from "../components/ServicesPage/Maintenance";
+import LiveEventProduction from "../components/ServicesPage/LiveEventProduction.tsx";
+import SystemIntegration from "../components/ServicesPage/SystemIntegration.tsx";
 
 export default function Services() {
   return (
     <Routes>
-      <Route path="consulting" element={<Consulting />} />
-      <Route path="maintenance" element={<Maintenance />} />
+      <Route path="live-event-production" element={<LiveEventProduction />} />
+      <Route path="system-integration" element={<SystemIntegration />} />
     </Routes>
   );
 }

@@ -62,16 +62,40 @@ export default function Navbar() {
 
             <NavbarDropdown label="Dịch vụ" path={"/solutions"}>
               <Link
-                to="/solutions/consulting"
+                to="/solutions/live-event-production"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Live Event Production
+              </Link>
+              <Link
+                to="/solutions/system-integration"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Tích hợp hệ thống
+              </Link>
+              <Link
+                to="/solutions/back-of-house"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
                 BOH
               </Link>
               <Link
-                to="/solutions/maintenance"
+                to="/solutions/front-of-house"
                 className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
               >
                 FOH
+              </Link>
+              <Link
+                to="/solutions/backline-reinforcement"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Backline Reinforcement
+              </Link>
+              <Link
+                to="/solutions/equipment-rental"
+                className="block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10"
+              >
+                Equipment Rental
               </Link>
             </NavbarDropdown>
 

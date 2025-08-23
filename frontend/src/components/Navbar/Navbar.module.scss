@@ -35,12 +35,16 @@
 
 .wave {
   @apply absolute bottom-0 left-0 w-full z-[999] pointer-events-none;
-  bottom: -3rem;
+  bottom: -5.6vh;
 }
 .wave path {
   @apply fill-none stroke-white opacity-15;
   stroke-width: 2;
 }
+//
+//.navDropdownItem {
+//  @apply block !text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors duration-200 ease-in-out hover:bg-white/10
+//}
 
 .dropdownTrigger {
   @apply flex items-center gap-2;
